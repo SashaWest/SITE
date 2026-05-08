@@ -3,136 +3,272 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>YouthRX Med Studio Professional | Advanced Health Care</title>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;500;700&family=Quicksand:wght@400;600&display=swap" rel="stylesheet">
+    <title>YouthRX Med Studio Professional LLC | Advanced Healthcare Solutions</title>
     <style>
-        :root {
-            --med-blue: #2c5282;
-            --soft-teal: #4fd1c5;
-            --light-gray: #f7fafc;
-            --text-dark: #2d3748;
-            --white: #ffffff;
+        @page {
+            size: A4;
+            margin: 0;
+            background-color: #ffffff;
         }
-
-        * { margin: 0; padding: 0; box-sizing: border-box; }
-        body { font-family: 'Quicksand', sans-serif; color: var(--text-dark); background: var(--white); line-height: 1.6; }
-        h1, h2, h3 { font-family: 'Montserrat', sans-serif; color: var(--med-blue); }
-
-        .container { max-width: 1100px; margin: 0 auto; padding: 0 20px; }
-
-        /* HERO SECTION */
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            color: #2c3e50;
+            margin: 0;
+            padding: 0;
+            background-color: #ffffff;
+        }
         header {
-            height: 80vh;
-            background: linear-gradient(rgba(44, 82, 130, 0.8), rgba(79, 209, 197, 0.6)), 
-                        url('https://images.unsplash.com/photo-1519494026892-80bbd2d6fd0d?auto=format&fit=crop&q=80&w=2000');
-            background-size: cover;
-            background-position: center;
-            display: flex;
-            align-items: center;
-            color: var(--white);
+            background-color: #005b96;
+            color: white;
+            padding: 60px 40px;
             text-align: center;
         }
-        .hero-content h1 { font-size: 3.5rem; color: var(--white); margin-bottom: 20px; }
-        .hero-content p { font-size: 1.5rem; font-weight: 300; }
-
-        /* ABOUT SECTION */
-        .section { padding: 80px 0; }
-        .about-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 50px; align-items: center; }
-        .about-text h2 { font-size: 2.5rem; margin-bottom: 20px; }
-        .about-text p { margin-bottom: 15px; font-size: 1.1rem; }
-
-        /* SERVICES SECTION */
-        .services { background: var(--light-gray); }
-        .services-title { text-align: center; margin-bottom: 50px; }
-        .service-cards { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 30px; }
-        .card { background: var(--white); padding: 40px; border-radius: 15px; box-shadow: 0 10px 25px rgba(0,0,0,0.05); transition: 0.3s; }
-        .card:hover { transform: translateY(-10px); }
-        .card h3 { margin-bottom: 15px; color: var(--soft-teal); }
-
-        /* INFO SECTION (Based on Docs) */
-        .info-strip { background: var(--med-blue); color: var(--white); padding: 40px 0; text-align: center; }
-
-        /* CONTACT SECTION */
-        .contact-box { background: var(--white); border: 2px solid var(--light-gray); padding: 50px; border-radius: 20px; max-width: 800px; margin: 0 auto; }
-        .contact-details { margin-top: 30px; text-align: center; }
-        .btn { display: inline-block; padding: 15px 40px; background: var(--soft-teal); color: var(--white); text-decoration: none; border-radius: 30px; font-weight: 700; margin-top: 20px; }
-
-        footer { background: #1a202c; color: #cbd5e0; padding: 40px 0; text-align: center; font-size: 0.9rem; }
-
-        @media (max-width: 768px) {
-            .about-grid { grid-template-columns: 1fr; }
-            .hero-content h1 { font-size: 2.5rem; }
+        header h1 {
+            font-size: 28pt;
+            margin: 0;
+            letter-spacing: 1px;
+            text-transform: uppercase;
+        }
+        header p {
+            font-size: 14pt;
+            margin-top: 15px;
+            opacity: 0.9;
+            max-width: 800px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+        section {
+            padding: 40px 50px;
+            border-bottom: 1px solid #eee;
+        }
+        .section-title {
+            color: #005b96;
+            font-size: 20pt;
+            margin-bottom: 20px;
+            border-left: 5px solid #00a8cc;
+            padding-left: 15px;
+        }
+        .about-text {
+            font-size: 11pt;
+            text-align: justify;
+        }
+        .grid-container {
+            display: table;
+            width: 100%;
+            border-spacing: 20px;
+            margin-left: -20px;
+        }
+        .grid-item {
+            display: table-cell;
+            width: 33.33%;
+            background: #f9fbfd;
+            padding: 20px;
+            border-radius: 8px;
+            vertical-align: top;
+            border: 1px solid #e1e8ed;
+        }
+        .grid-item h3 {
+            color: #00a8cc;
+            font-size: 13pt;
+            margin-top: 0;
+        }
+        .grid-item p {
+            font-size: 10.5pt;
+            margin-bottom: 0;
+        }
+        .process-flow {
+            margin-top: 30px;
+        }
+        .step {
+            margin-bottom: 25px;
+            position: relative;
+            padding-left: 50px;
+        }
+        .step-number {
+            position: absolute;
+            left: 0;
+            top: 0;
+            background: #005b96;
+            color: white;
+            width: 35px;
+            height: 35px;
+            border-radius: 50%;
+            text-align: center;
+            line-height: 35px;
+            font-weight: bold;
+        }
+        .step h4 {
+            margin: 0 0 5px 0;
+            font-size: 12pt;
+            color: #34495e;
+        }
+        .contact-form-box {
+            background-color: #f4f7f6;
+            padding: 30px;
+            border-radius: 10px;
+        }
+        .form-row {
+            margin-bottom: 15px;
+        }
+        .form-label {
+            display: block;
+            font-weight: bold;
+            margin-bottom: 5px;
+            font-size: 10pt;
+        }
+        .form-input {
+            width: 100%;
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            background: white;
+            height: 30px;
+        }
+        .footer-info {
+            background-color: #2c3e50;
+            color: white;
+            padding: 40px 50px;
+        }
+        .footer-grid {
+            display: table;
+            width: 100%;
+        }
+        .footer-col {
+            display: table-cell;
+            width: 50%;
+        }
+        .footer-col h3 {
+            color: #00a8cc;
+            margin-top: 0;
+        }
+        .accent-box {
+            background-color: #eef9ff;
+            border-left: 4px solid #005b96;
+            padding: 20px;
+            margin: 20px 0;
         }
     </style>
 </head>
 <body>
 
+    <!-- 1. Main Screen -->
     <header>
-        <div class="container hero-content">
-            <h1>YouthRX Med Studio Professional</h1>
-            <p>Elevating Wellness in Winston, Georgia</p>
-        </div>
+        <h1>YouthRX Med Studio Professional</h1>
+        <p>Redefining Wellness Through Integrative Medical Excellence and Personalized Ambulatory Care Solutions</p>
     </header>
 
-    <section class="section">
-        <div class="container about-grid">
-            <div class="about-text">
-                <h2>Excellence in Health Care</h2>
-                <p><strong>YouthRX Med Studio Professional LLC</strong> is a premier health care provider specialized in the offices of health practitioners. Our mission is to provide advanced ambulatory health services tailored to your individual needs.</p>
-                <p>Located at 8615 Downs Rd, we serve as a central hub for professional medical care and social assistance in the Winston community.</p>
+    <!-- 2. About Us -->
+    <section>
+        <h2 class="section-title">Our Medical Philosophy</h2>
+        <div class="about-text">
+            YouthRX Med Studio Professional LLC stands at the forefront of modern ambulatory health services, committed to delivering clinical excellence with a human touch. We specialize in comprehensive health practitioner services that bridge the gap between traditional medicine and innovative wellness strategies. Our team of dedicated professionals focuses on long-term health outcomes, ensuring each patient receives a tailored approach to their unique physiological needs. By integrating evidence-based practices with state-of-the-art diagnostic insights, we empower our community to achieve optimal vitality at every stage of life. We believe that professional healthcare should be accessible, transparent, and strictly focused on the well-being of the individual.
+        </div>
+    </section>
+
+    <!-- 3. Services -->
+    <section>
+        <h2 class="section-title">Elite Healthcare Provisions</h2>
+        <div class="grid-container">
+            <div class="grid-item">
+                <h3>Ambulatory Clinical Care</h3>
+                <p>We provide high-level outpatient services designed for patients who require expert medical intervention without the need for hospital admission. Our clinic utilizes advanced diagnostic tools to monitor, manage, and treat a wide range of acute and chronic conditions effectively. Our primary goal is to ensure rapid recovery and sustained health through consistent professional oversight.</p>
             </div>
-            <div>
-                <img src="https://images.unsplash.com/photo-1576091160550-2173dba999ef?auto=format&fit=crop&q=80&w=1000" alt="Clinic Interior" style="width: 100%; border-radius: 20px;">
+            <div class="grid-item">
+                <h3>Integrative Health Consultations</h3>
+                <p>Our practitioners conduct deep-dive assessments into your overall health profile to identify underlying imbalances and potential risks. We combine metabolic insights with nutritional guidance and preventative protocols to create a holistic roadmap for your future wellness. Each consultation is private, thorough, and focused on providing actionable medical advice.</p>
+            </div>
+            <div class="grid-item">
+                <h3>Specialized Practitioner Support</h3>
+                <p>As a leading studio of health professionals, we offer specialized assistance across multiple disciplines within the health and social assistance sector. Whether it's diagnostic laboratory coordination or long-term nursing care management, our experts provide the necessary bridge to complex medical systems. We act as your professional partner in navigating the intricacies of modern healthcare delivery.</p>
             </div>
         </div>
     </section>
 
-    <section class="section services">
-        <div class="container">
-            <div class="services-title">
-                <h2>Our Specialized Sectors</h2>
+    <!-- 4. Advantages (Block 4) -->
+    <section>
+        <h2 class="section-title">Why Professionals Choose YouthRX</h2>
+        <div class="grid-container">
+            <div class="grid-item">
+                <h3>Clinical Precision</h3>
+                <p>Our methodology is rooted in data-driven science, ensuring that every recommendation is backed by clinical evidence and rigorous professional standards.</p>
             </div>
-            <div class="service-cards">
-                <div class="card">
-                    <h3>Ambulatory Care</h3>
-                    <p>Expert medical services provided in an outpatient setting, ensuring you get the care you need without a hospital stay.</p>
-                </div>
-                <div class="card">
-                    <h3>Health Practice</h3>
-                    <p>Comprehensive consultations and professional health management within our specialized med studio environment.</p>
-                </div>
-                <div class="card">
-                    <h3>Wellness Integration</h3>
-                    <p>Access to a broader health and social assistance sector, including specialized practitioner offices.</p>
-                </div>
+            <div class="grid-item">
+                <h3>Patient-Centric Logic</h3>
+                <p>We eliminate the "one size fits all" approach, creating bespoke treatment plans that respect the biological individuality of every person we treat.</p>
+            </div>
+            <div class="grid-item">
+                <h3>Strategic Health Planning</h3>
+                <p>We don't just treat symptoms; we design long-term strategies that focus on longevity, prevention, and the enhancement of life quality through medical innovation.</p>
             </div>
         </div>
     </section>
 
-    <div class="info-strip">
-        <div class="container">
-            <p>Recognized professional in the <strong>Health Care and Social Assistance</strong> industry.</p>
-        </div>
-    </div>
-
-    <section class="section">
-        <div class="container">
-            <div class="contact-box">
-                <h2 style="text-align: center;">Book Your Appointment</h2>
-                <div class="contact-details">
-                    <p><strong>Visit Us:</strong><br>8615 Downs Rd, Winston, GA, 30187-1908</p>
-                    <p style="margin-top: 20px;"><strong>Email:</strong><br>info@youthrxmedstudioprofessional.com</p>
-                    <a href="mailto:info@youthrxmedstudioprofessional.com" class="btn">Connect Now</a>
-                </div>
+    <!-- 5. Process (Block 5) -->
+    <section>
+        <h2 class="section-title">The Path to Optimal Health</h2>
+        <div class="process-flow">
+            <div class="step">
+                <div class="step-number">1</div>
+                <h4>Initial Diagnostic Evaluation</h4>
+                <p>A comprehensive intake process where we collect your medical history and conduct baseline health screenings to understand your current status.</p>
+            </div>
+            <div class="step">
+                <div class="step-number">2</div>
+                <h4>Collaborative Strategy Design</h4>
+                <p>Our practitioners meet to analyze your data and develop a personalized medical protocol that aligns with your specific health objectives and lifestyle.</p>
+            </div>
+            <div class="step">
+                <div class="step-number">3</div>
+                <h4>Guided Implementation & Monitoring</h4>
+                <p>We launch your personalized program with continuous professional monitoring, adjusting the approach as your body responds to the treatment and care.</p>
             </div>
         </div>
     </section>
 
-    <footer>
-        <div class="container">
-            <p>&copy; 2026 YouthRX Med Studio Professional LLC. All Rights Reserved.</p>
-            <p style="font-size: 0.7rem; margin-top: 10px;">Officially registered as Health Practitioner Offices under Winston, GA jurisdictions.</p>
+    <!-- 6. Contact Form Phrases -->
+    <section>
+        <h2 class="section-title">Initiate Your Transformation</h2>
+        <div class="contact-form-box">
+            <div class="form-row">
+                <label class="form-label">Full Name / Identity</label>
+                <div class="form-input"></div>
+            </div>
+            <div class="form-row">
+                <label class="form-label">Secure Contact Email</label>
+                <div class="form-input"></div>
+            </div>
+            <div class="form-row">
+                <label class="form-label">Describe Your Medical Objectives or Inquiry</label>
+                <div class="form-input" style="height: 80px;"></div>
+            </div>
+            <div style="text-align: right; margin-top: 20px;">
+                <span style="background: #005b96; color: white; padding: 10px 30px; border-radius: 5px; font-weight: bold; font-size: 10pt;">REQUEST CONSULTATION →</span>
+            </div>
+        </div>
+        <p style="font-size: 9pt; color: #7f8c8d; margin-top: 15px; text-align: center;">
+            "Your health data is handled with the highest level of professional confidentiality and clinical ethics."
+        </p>
+    </section>
+
+    <!-- 7. Contacts -->
+    <footer class="footer-info">
+        <div class="footer-grid">
+            <div class="footer-col">
+                <h3>Corporate Headquarters</h3>
+                <p>YouthRX Med Studio Professional LLC<br>
+                8615 Downs Rd<br>
+                Winston, GA, 30187-1908<br>
+                United States</p>
+            </div>
+            <div class="footer-col">
+                <h3>Electronic Communication</h3>
+                <p>For inquiries and appointments:<br>
+                <strong>info@youthrxmedstudioprofessional.com</strong></p>
+                <p style="font-size: 9pt; opacity: 0.7; margin-top: 20px;">
+                    © 2024 YouthRX Med Studio Professional LLC. All Rights Reserved. Clinical Excellence in Ambulatory Care.
+                </p>
+            </div>
         </div>
     </footer>
 
